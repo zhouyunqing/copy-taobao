@@ -3,7 +3,6 @@
     <navbar title="提现"></navbar>
     <div class="tips">为了您的账户安全，请先下载多米彩票APP并且完善账户信息之后再申请提现。</div>
     <div class="download" @click="downLoad">点击下载APP</div>
-    <Province></Province>
   </div>
 </template>
 
@@ -18,8 +17,7 @@ export default {
     }
   },
   components: {
-    Navbar,
-    Province
+    Navbar
   }
 }
 </script>

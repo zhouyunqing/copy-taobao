@@ -36,31 +36,19 @@
     <div class="notice">
       <div class="notice-text">淘宝头条</div>
       <div class="wrap">
-        <ul class="clearfix" ref="ul">
-          <li>{{activeText}}</li>
-        </ul>
-        <!-- <marquee direction="up" behavior="scroll" scrollamount="1" scrolldelay="0" loop="-1">
-                <p>1一大堆文字飘过～</p>
-                <p>2一大堆文字飘过～</p>
-                <p>3一大堆文字飘过～</p>
-                <p>4一大堆文字飘过～</p>
-                <p>5一大堆文字飘过～</p>
-        </marquee> -->
+        <marquee direction="up" scrolldelay="1" scrollamount="1" loop="-1" behavior="scroll" hspace="20" vspace="1" 
+                width="100%" height="30px">                   
+          <p>恭喜 135****2801会员成功。</p>
+          <p>恭喜 138****2251会员成功。</p>
+          <p>恭喜 159****3368会员成功。</p>
+          <p>恭喜 135****2287会员成功。</p>
+          <p>恭喜 155****2567会员成功。</p>
+          <p>恭喜 152****8967会员成功。</p>
+          <p>恭喜 139****5468会员成功。</p>
+        </marquee>
       </div>
     </div>
     <!-- 中奖头条E -->
-
-    <!-- 购彩tab -->
-    <!-- <div class="info-list" v-if="cc">
-      <div class="list-col lottery">
-        <img src="../../common/img/football.png" class="recharge-icon">
-      </div> 
-      <div class="list-col racecolor">
-        <img src="" class="recharge-icon"> 
-        <span class="rechrge-text">竞足单关</span>
-      </div>
-    </div> -->
-    <!-- 购彩tab -->
 
     <!-- 焦点赛事S -->
     <div v-if="activeData.length" class="slider-wrapper focus-event">
@@ -205,7 +193,7 @@ export default {
     }
   },
   mounted () {
-    this.move(-1)
+    // this.move(-1)
     this.serialize()
   },
   methods: {
