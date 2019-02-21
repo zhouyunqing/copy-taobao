@@ -4,6 +4,10 @@
       <div class="tab-icon for-color for-color-active"></div>
       <div class="tab-link">购彩</div>
     </router-link>
+    <router-link tag="div" class="tab-item" to="/aa">
+      <div class="tab-icon car-color car-color-active"></div>
+      <div class="tab-link">购物车</div>
+    </router-link>
     <router-link tag="div" class="tab-item" to="/mine">
       <div class="tab-icon mine-color mine-color-active"></div>
       <span class="tab-link">我的</span>
@@ -41,6 +45,10 @@
           background: url('../../common/img/tabs/for-color-active.png') no-repeat;
           background-size: contain;
         }
+        .car-color-active {
+          background: url('../../common/img/tabs/car_active.png') no-repeat;
+          background-size: contain;
+        }
         .mine-color-active {
           background: url('../../common/img/tabs/mine-active.png') no-repeat;
           background-size: contain;
@@ -56,6 +64,10 @@
       }
       .for-color {
         background: url('../../common/img/tabs/for-color-gray.png') no-repeat;
+        background-size: contain;
+      }
+      .car-color {
+        background: url('../../common/img/tabs/car.png') no-repeat;
         background-size: contain;
       }
       .mine-color {
