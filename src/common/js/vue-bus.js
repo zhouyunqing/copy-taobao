@@ -1,5 +1,6 @@
 // 封装bus，，解决跨组件之间的通信
-const install = function (vue) {
+import Vue from 'vue'
+const install = function () {
 	const Bus = new Vue({
 		methods: {
 			emit (event, ...args) {

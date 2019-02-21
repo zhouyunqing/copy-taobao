@@ -25,12 +25,14 @@
     <ul class="box-wrapper">
       <li v-for="(item, index) in wrapperData" :key="index">
         <router-link to="" class="block">
-          <img :src="item.icon" class="wrap-icon icon-tm"></span>
+          <img :src="item.icon" class="wrap-icon icon-tm">
           <span class="wrapper-text">{{item.text}}</span>
         </router-link>
       </li>
     </ul>
     <!-- wrapper -->
+
+    <div contenteditable="true" style="width: 300px;height: 40px;">11</div>
 
     <!-- 中奖头条S -->
     <div class="notice">

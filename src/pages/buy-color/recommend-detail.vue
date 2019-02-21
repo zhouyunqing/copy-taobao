@@ -13,7 +13,6 @@
 
 <script>
 import Navbar from '@/components/navbar'
-import { getLocalTime } from '@/common/js/timestamp.js'
 export default {
   data () {
     return {
@@ -27,8 +26,7 @@ export default {
   },
   methods: {
     getArticle () {
-      let date = new Date().getTime()
-      this.articleData.date = getLocalTime(date)
+      this.date = new Date().getTime()
     }
   },
   mounted () {
