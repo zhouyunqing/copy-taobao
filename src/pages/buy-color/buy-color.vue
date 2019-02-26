@@ -32,14 +32,20 @@
     <!-- 轮播图E -->
 
     <!-- wrapper -->
-    <ul class="box-wrapper">
-      <li v-for="(item, index) in wrapperData" :key="index">
-        <router-link to="" class="block">
-          <img :src="item.icon" class="wrap-icon icon-tm">
-          <span class="wrapper-text">{{item.text}}</span>
-        </router-link>
-      </li>
-    </ul>
+    <div class="box-wrap">
+      <div class="DView"></div>
+      <div class="box-header">
+        <div class="header-back"></div>
+      </div>
+      <ul class="list-wrapper">
+        <li v-for="(item, index) in wrapperData" :key="index">
+          <router-link to="" class="block">
+            <img :src="item.icon" class="wrap-icon icon-tm">
+            <span class="wrapper-text">{{item.text}}</span>
+          </router-link>
+        </li>
+      </ul>
+    </div>
     <!-- wrapper -->
 
     <!-- 中奖头条S -->
@@ -284,6 +290,9 @@ export default {
 
 <style scoped lang="scss">
 @import '../../common/css/public.sass';
+.swiper-pagination-fraction, .swiper-pagination-custom, .swiper-container-horizontal > .swiper-pagination-bullets {
+  bottom: 20px !important;;
+}
 .buy-color-wrap {
   width: 100%;
   font-size: $font14; /*no*/
@@ -337,6 +346,7 @@ export default {
     height: 100%;
     padding-top: 80px;
     overflow: hidden;
+    z-index: 1;
     .img-style {
       width: 100%;
       height: 240px;
@@ -346,37 +356,69 @@ export default {
   /* 
     box-wrapper
   */
-  .box-wrapper {
+  .box-wrap {
     display: flex;
-    align-items: center;
-    justify-content: center;
-    flex-wrap: wrap;
-    width: 100%;
-    padding: 20px;
-    background: #fff;
-    li {
-      -webkit-box-flex: 0;
-      flex: 0 0 20%;
-      .block {
-        display: flex;     
-        align-items: center;       
-        justify-content: center;
-        flex-direction: column;
-        padding: 12px 4px;
-        box-sizing: border-box;
-        font-size: $font12; /*no*/
-        color: #222;
-        .wrap-icon {
-          width: 132px;
-          height: 106px;
-        }
-        .wrapper-text {
-          margin-top: 10px;
-          color: #585656;
+    position: relative;
+    margin-top: -20px;
+    z-index: 2;
+    .DView {
+      display: flex;
+      overflow: hidden;
+      background-color: rgb(255, 255, 255);
+      margin-top: 9px;
+      height: 100%;
+      width: 100%;
+      top: 0px;
+      left: 0px;
+      position: absolute;
+    }
+    .box-header{
+      display: flex;
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      overflow: hidden;
+      .header-back {
+        width: 100%;
+        height: 100%;
+        background-image: url('../../common/img/home/wrapper/wrapper_header.png');
+        background-repeat: no-repeat;
+        background-position: center center;
+        background-size: contain;
+      }
+    }
+    .list-wrapper {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-wrap: wrap;
+      width: 100%;
+      z-index: 2;
+      li {
+        -webkit-box-flex: 0;
+        flex: 0 0 20%;
+        .block {
+          display: flex;     
+          align-items: center;       
+          justify-content: center;
+          flex-direction: column;
+          padding: 12px 4px;
+          box-sizing: border-box;
+          font-size: $font12; /*no*/
+          color: #222;
+          .wrap-icon {
+            width: 122px;
+            height: 96px;
+          }
+          .wrapper-text {
+            margin-top: 10px;
+            color: #585656;
+          }
         }
       }
     }
   }
+  
 
   /*
     活动文字
