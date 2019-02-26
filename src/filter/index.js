@@ -10,8 +10,6 @@ const filters = {
 	getLocalTime: (timeStamp) => {
 		if (typeof timeStamp == 'string') {
 			timeStamp = Number(timeStamp)
-		} else {
-            timeStamp = timeStamp
 		}
 		let date = new Date(timeStamp),//时间戳为10位需*1000，时间戳为13位的话不需乘1000
             Y = date.getFullYear(),
@@ -20,8 +18,7 @@ const filters = {
             h = date.getHours(),
             m = date.getMinutes(),
             s = date.getSeconds();
-	    return Y + '-' + filters.toDobule(M) + '-' + filters.toDobule(D) + ' ' + 
-	    		filters.toDobule(h) + ':' + filters.toDobule(m) + ':' + filters.toDobule(s)
+		return Y + '-' + filters.toDobule(M) + '-' + filters.toDobule(D) + ' ' + filters.toDobule(h) + ':' + filters.toDobule(m) + ':' + filters.toDobule(s)
 	},
 
 	// 年月日
@@ -37,7 +34,7 @@ const filters = {
     }
 }
 
-const install = function(Vue, opts = {}) {
+const install = function(Vue) {
 	Object.keys(filters).forEach(key => {
 		Vue.filter(key, filters[key])
 	})
