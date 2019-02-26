@@ -5,6 +5,7 @@
         <a class="placeholder"><span class="text iconfont icon-search">寻找宝贝店铺</span></a>
       </div>
     </div>
+    
     <!-- 轮播图S -->
     <!-- <div ref="scroll" class="slide-show">
       <div>
