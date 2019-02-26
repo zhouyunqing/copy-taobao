@@ -9,6 +9,8 @@ import VueLazyLoad from 'vue-lazyload'
 import Toast from '@/components/toast'
 import VueBus from './common/js/vue-bus'
 import Filter from '@/filter'
+import VueAwesomeSwiper from 'vue-awesome-swiper'
+import 'swiper/dist/css/swiper.css'
 
 Vue.prototype.$axios = axios
 Vue.use(Toast)
@@ -18,6 +20,7 @@ Vue.use(VueLazyLoad, {
 })
 Vue.use(VueBus)
 Vue.use(Filter)
+Vue.use(VueAwesomeSwiper)
 
 Vue.config.productionTip = false
 

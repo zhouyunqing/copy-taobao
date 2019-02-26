@@ -6,7 +6,7 @@
       </div>
     </div>
     <!-- 轮播图S -->
-    <div ref="scroll" class="slide-show">
+    <!-- <div ref="scroll" class="slide-show">
       <div>
         <div v-if="recommends.length" class="slider-wrapper" ref="sliderWrapper">
           <slider>
@@ -18,6 +18,16 @@
           </slider>
         </div>
       </div>
+    </div> -->
+    <div class="slide-show">
+      <swiper :options="swiperOption">
+        <swiper-slide v-for="(slide, index) in recommends" :key="index">
+          <a :href="slide.linkUrl">
+            <img :src="slide.picUrl" class="img-style">
+          </a>
+        </swiper-slide>
+        <div class="swiper-pagination" slot="pagination"></div>
+      </swiper>
     </div>
     <!-- 轮播图E -->
 
@@ -106,6 +116,18 @@ import Shop from '@/components/shop'
 export default {
   data () {
     return {
+      swiperOption: {
+        pagination: {
+          el: '.swiper-pagination',      
+        },
+        autoplay: {
+          delay: 3000,
+          stopOnLastSlide: false,
+          disableOnInteraction: true
+        },
+        effect: 'coverflow',
+        loop: true
+      },
       recommends: [
         {
           linkUrl: 'https://www.baidu.com',
@@ -315,10 +337,9 @@ export default {
     height: 100%;
     padding-top: 80px;
     overflow: hidden;
-    .slider-wrapper {
-      position: relative;
+    .img-style {
       width: 100%;
-      overflow: hidden;
+      height: 240px;
     }
   }
 
