@@ -80,7 +80,7 @@ export default {
 
     // 充值or体现
     useOparate (event) {
-      console.log(event)
+      // console.log(event)
       if (event.target.innerHTML === '充值') {
         this.$router.push({path: '/recharge'})
       } else {
@@ -98,7 +98,7 @@ export default {
     }
   },
   mounted () {
-    console.log(this.$route)
+    // console.log(this.$route)
     if (!this.$route.params.id || this.$route.params.id === null) {
       this.routeId = 1
     } else {

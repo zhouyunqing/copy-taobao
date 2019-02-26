@@ -67,6 +67,9 @@ const RecommendDetail = (resolve) => {
   })
 }
 
+// 购物车
+const Car = () => import( /* webpackChunkName: "car" */ '@/pages/car/car.vue')
+
 // 电影列表
 const Movie = (resolve) => {
   import('@/pages/mine/movie').then((module) => {
@@ -86,6 +89,10 @@ export default new Router({
         {
           path: '/buy-color',
           component: BuyColor
+        },
+        {
+          path: '/car',
+          component: Car
         },
         {
           path: '/mine',

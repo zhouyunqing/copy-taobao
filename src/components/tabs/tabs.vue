@@ -2,9 +2,9 @@
   <div class="tab">
     <router-link tag="div" class="tab-item" to="/buy-color">
       <div class="tab-icon for-color for-color-active"></div>
-      <div class="tab-link">购彩</div>
+      <div class="tab-link">首页</div>
     </router-link>
-    <router-link tag="div" class="tab-item" to="/aa">
+    <router-link tag="div" class="tab-item" to="/car">
       <div class="tab-icon car-color car-color-active"></div>
       <div class="tab-link">购物车</div>
     </router-link>

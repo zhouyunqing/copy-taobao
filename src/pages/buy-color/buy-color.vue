@@ -465,7 +465,7 @@ export default {
       
     }
   }
-  // 专家推荐
+  /* 专家推荐 */
   .expert-recommend {
     margin: 20px 0 140px;
     padding-bottom: 20px;
