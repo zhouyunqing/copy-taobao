@@ -2,7 +2,7 @@
   <div class="buy-color-wrap">
     <div class="sc-bxivhb">
       <div class="header-bd">
-        <a class="placeholder"><span class="text iconfont icon-search">寻找宝贝店铺</span></a>
+        <a class="placeholder" @click="openSearch"><span class="text iconfont icon-search">寻找宝贝店铺</span></a>
       </div>
     </div>
     <!-- 轮播图S -->
@@ -197,6 +197,11 @@ export default {
     this.serialize()
   },
   methods: {
+    // 打开搜索背景
+    openSearch () {
+      console.log('1211')
+    },
+
     // 活动文字滚动
     move (iSpeed) {
       let oUl = this.$refs.ul
