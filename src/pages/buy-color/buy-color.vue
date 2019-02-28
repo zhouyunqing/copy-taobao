@@ -2,7 +2,7 @@
   <div class="buy-color-wrap">
     <div class="sc-bxivhb">
       <div class="header-bd">
-        <a class="placeholder"><span class="text iconfont icon-search">寻找宝贝店铺</span></a>
+        <a class="placeholder" @click="openSearch"><span class="text iconfont icon-search">寻找宝贝店铺</span></a>
       </div>
     </div>
     
@@ -66,6 +66,10 @@
       </div>
     </div>
     <!-- 中奖头条E -->
+
+    <audio controls autoplay="autoplay" ref="audio" style="display:none">
+      <source src="../../common/audio/because.mp3" type="audio/mpeg">
+    </audio>
 
     <!-- 焦点赛事S -->
     <div v-if="activeData.length" class="slider-wrapper focus-event">
@@ -222,26 +226,23 @@ export default {
     }
   },
   mounted () {
-    // this.move(-1)
     this.serialize()
+    this.autoPlay()
   },
   methods: {
-    // 活动文字滚动
-    move (iSpeed) {
-      let oUl = this.$refs.ul
-      // let aLi = oUl.getElementsByTagName('li')
-      let aLi = document.querySelector('li')
-      // 复制一份
-      // oUl.innerHTML += oUl.innerHTML
-      // ul的宽度 = 第一个li的宽度 * li的个数
-      oUl.style.width = aLi.offsetWidth+ 'px'
+    // 打开搜索背景
+    openSearch () {
+      console.log('1211')
+    },
 
-      this.timer = setInterval(function () {
-        if (oUl.offsetLeft <= -oUl.offsetWidth / 2) {
-          oUl.style.left = '0'
-        }
-        oUl.style.left = oUl.offsetLeft + iSpeed + 'px'
-      }, 30)
+    // 播放音乐
+    autoPlay () {
+      return new Promise((resolve, reject) => {
+        let audio = this.$refs.audio;
+        resolve(audio)
+      }).then((res)=> {
+        res.play()
+      })
     },
 
     // 处理比赛返回数据
