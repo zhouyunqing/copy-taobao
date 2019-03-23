@@ -5,6 +5,7 @@
         <a class="placeholder" @click="openSearch"><span class="text iconfont icon-search">寻找宝贝店铺</span></a>
       </div>
     </div>
+    
     <!-- 轮播图S -->
     <div class="slide-show">
       <swiper :options="swiperOption">
