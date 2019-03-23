@@ -22,7 +22,7 @@ export default {
         waterFull () {
             let oWidthArr = this.$refs.lis,
                 oWidth = null;
-            return new Promise((resolve, reject) => {
+            return new Promise((resolve) => {
                 setTimeout(() => {    
                     oWidthArr.forEach(element => {
                         oWidth = element.offsetWidth    // 获取到每张图片的宽度
