@@ -6,19 +6,6 @@
       </div>
     </div>
     <!-- 轮播图S -->
-    <!-- <div ref="scroll" class="slide-show">
-      <div>
-        <div v-if="recommends.length" class="slider-wrapper" ref="sliderWrapper">
-          <slider>
-            <div v-for="(item, index) in recommends" :key="index">
-              <a :href="item.linkUrl">
-                <img :src="item.picUrl">
-              </a>
-            </div>
-          </slider>
-        </div>
-      </div>
-    </div> -->
     <div class="slide-show">
       <swiper :options="swiperOption">
         <swiper-slide v-for="(slide, index) in recommends" :key="index">
@@ -236,7 +223,7 @@ export default {
 
     // 播放音乐
     autoPlay () {
-      return new Promise((resolve, reject) => {
+      return new Promise((resolve) => {
         let audio = this.$refs.audio;
         resolve(audio)
       }).then((res)=> {
