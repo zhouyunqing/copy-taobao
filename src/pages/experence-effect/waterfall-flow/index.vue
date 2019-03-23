@@ -19,6 +19,7 @@ export default {
         this.waterFull()
     },
     methods: {
+        // 瀑布流
         waterFull () {
             let oWidthArr = this.$refs.lis,
                 oWidth = null;
