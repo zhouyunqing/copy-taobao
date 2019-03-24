@@ -1,6 +1,8 @@
 <template>
 	<div class="car-wrap">
     <Button btnText="pc端体验瀑布流" type="primary" @click.native="toWaterFall"></Button>
+    <br>
+    <Button btnText="级联" type="primary"></Button>
   </div>
 </template>
 

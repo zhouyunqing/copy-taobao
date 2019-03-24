@@ -462,14 +462,6 @@ export default {
     .racecolor {
       margin-left: 20px;
     }
-    .lottery {
-      background: url('../../common/img/football.png') no-repeat;
-      background-size: contain;
-    }
-    .racecolor {
-      background: url('../../common/img/single-pass.png') no-repeat;
-      background-size: contain;
-    }
   }
   // 焦点赛事
   .focus-event {

@@ -42,7 +42,7 @@ export default {
 @import '../../common/css/public.sass';
 .header {
   height: 90px;
-  background: #ef4242;
+  background: #ff9000;
   color: #fff;
   position: fixed;
   left: 0;
@@ -63,7 +63,7 @@ export default {
     .header-icon {
       width: 22px;
       height: 36px;
-      background: url('../../common/img/back.png') no-repeat;
+      background: url('./img/back.png') no-repeat;
       background-size: contain;
     }
   }

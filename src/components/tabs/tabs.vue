@@ -8,7 +8,7 @@
       <div class="tab-icon car-color car-color-active"></div>
       <div class="tab-link">购物车</div>
     </router-link>
-    <router-link tag="div" class="tab-item" to="/mine">
+    <router-link tag="div" class="tab-item" to="/logout">
       <div class="tab-icon mine-color mine-color-active"></div>
       <span class="tab-link">我的</span>
     </router-link>
