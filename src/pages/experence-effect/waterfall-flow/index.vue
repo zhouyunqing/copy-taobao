@@ -1,6 +1,5 @@
 <template>
     <div class="water-fall">
-        <h1>瀑布流</h1>
         <div class="single-waterfull" ref="lis" v-for="(item, index) in flowList" :key="index">
             <img :src="item.url" alt="">
         </div>
@@ -68,9 +67,12 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-.single-waterfull {
-    float: left;
-    padding-left: 20px;
+.water-fall {
+    padding-top: 20px;
+    .single-waterfull {
+        float: left;
+        padding-left: 20px;
+    }
 }
 </style>
 
