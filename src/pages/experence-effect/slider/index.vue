@@ -49,12 +49,12 @@
 				if (this.moveX < 0 || this.moveX == 0) {
 					this.sliderBg = `width: 0`
 				} else if (this.moveX > 0) {
-					this.btnSlide.style.left = this.moveX + 'px'
+					this.btnSlide.style = `transform: translateX(${this.moveX}px)`
 					this.sliderBg = `width: ${this.moveX}px`
 
 					let maxWidth = ncScale.offsetWidth - this.btnSlide.offsetWidth		// 获取最大的滑动宽度
 					if (this.moveX >= (maxWidth)) {
-						this.btnSlide.style.left = maxWidth + 'px'
+						this.btnSlide.style = `transform: translateX(${maxWidth}px)`
 						this.sliderBg = `width: ${maxWidth}px`
 						scaleText.innerHTML = '通过验证'
 						scaleText.style.color = '#fff'
@@ -66,7 +66,7 @@
 			moseUpFn () {
 				if (!this.flag) {
 					this.sliderBg = `width: 0`
-					this.btnSlide.style.left = 0
+					this.btnSlide.style = `transform: translateX(0)`
 				}
 			}
 		}
