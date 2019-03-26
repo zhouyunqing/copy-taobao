@@ -6,10 +6,10 @@
 				@touchstart="touchStart"
 				@touchmove="touchMove"
 				@touchEnd="touchEnd">
-				>></span>
+				</span>
 
 			<!-- 文字 -->
-			<div class="scale_text" ref="scaleText">请按住滑块，拖动到最右边</div>
+			<div class="scale_text" ref="scaleText">向右滑动验证</div>
 
 			<!-- 背景 -->
 			<div class="bg" :style="sliderBg"></div>
@@ -96,6 +96,18 @@
 		    cursor: move;
 		    background: #fff;
 		    z-index: 2;
+		    &:hover {
+		    	cursor: pointer;
+		    }
+		    &::before {
+		    	content: "";
+		    	display: block;
+		    	width: 64px;
+		    	height: 64px;
+		    	margin: 16px auto 0;
+		    	background: url('./img/slider.png') no-repeat;
+		    	background-size: contain;
+		    }
 	    }
 	    .scale_text {
 	    	width: 100%;
@@ -103,12 +115,15 @@
 		    text-align: center;
 		    position: absolute;
 		    z-index: 1;
-		    background: transparent;
 		    color: #9c9c9c;
 		    height: 104px;
 		    line-height: 104px;
 		    font-size: $font16; /*no*/
 		    cursor: pointer;
+        background: -webkit-gradient(linear, left top, right top, color-stop(0, #4d4d4d), color-stop(.4, #4d4d4d), color-stop(.5, white), color-stop(.6, #4d4d4d), color-stop(1, #4d4d4d));
+			  -webkit-background-clip: text;
+			  -webkit-text-fill-color: transparent;
+			  animation: slidetounlock 3s infinite;
 	    }
 	    .bg {
 	    	position: absolute;
@@ -116,6 +131,15 @@
     		height: 100%;
     		background: #7ac23c;
 	    }
+		}
+	}
+
+	@keyframes slidetounlock {
+		0% {
+		   background-position: -200px 0;
+		}
+		100% {
+	    background-position: 200px 0;
 		}
 	}
 </style>
