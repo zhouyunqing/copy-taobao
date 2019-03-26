@@ -4,7 +4,7 @@
     <br>
     <Button btnText="递归树" type="primary" @click.native="toEff('tree')"></Button>
     <br>
-    <Button btnText="滑块" type="primary" @click.native="toEff('slider')"></Button>
+    <Button btnText="移动端滑块" type="primary" @click.native="toEff('slider')"></Button>
   </div>
 </template>
 
