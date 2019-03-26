@@ -282,6 +282,11 @@ export default {
 .swiper-pagination-fraction, .swiper-pagination-custom, .swiper-container-horizontal > .swiper-pagination-bullets {
   bottom: 20px !important;;
 }
+ul li {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
 .buy-color-wrap {
   width: 100%;
   font-size: $font14; /*no*/

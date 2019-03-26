@@ -24,7 +24,10 @@ const Movie = (resolve) => {
   })
 }
 
+/* 效果体验区 */
 const WaterfallFlow = () => import( /* webpackChunkName: "waterfall-flow" */ '@/pages/experence-effect/waterfall-flow')
+const Tree = () => import( /* webpackChunkName: "tree" */ '@/pages/experence-effect/tree')
+const Slider = () => import( /* webpackChunkName: "slider" */ '@/pages/experence-effect/slider')
 
 Vue.use(Router)
 
@@ -56,6 +59,14 @@ export default new Router({
     {
       path: '/waterfall-flow',
       component: WaterfallFlow
+    },
+    {
+      path: '/tree',
+      component: Tree
+    },
+    {
+      path: '/slider',
+      component: Slider
     }
   ]
 })

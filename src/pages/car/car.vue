@@ -1,8 +1,10 @@
 <template>
 	<div class="car-wrap">
-    <Button btnText="pc端体验瀑布流" type="primary" @click.native="toWaterFall"></Button>
+    <Button btnText="pc端体验瀑布流" type="primary" @click.native="toEff('waterfall-flow')"></Button>
     <br>
-    <Button btnText="级联" type="primary"></Button>
+    <Button btnText="递归树" type="primary" @click.native="toEff('tree')"></Button>
+    <br>
+    <Button btnText="滑块" type="primary" @click.native="toEff('slider')"></Button>
   </div>
 </template>
 
@@ -15,8 +17,8 @@
 			}
     },
     methods: {
-      toWaterFall () {
-        this.$router.push({'path': '/waterfall-flow'})
+      toEff (path) {
+        this.$router.push({'path': `/${path}`})
       }
     },
     components: {

@@ -1,0 +1,31 @@
+{
+	"tree": [
+		{
+			"name": "AAA",
+			"child":[
+				{
+					"name": "a1-1",
+					"child": [
+						{"name": "a1-1-1"}
+					]
+				},
+				{"name": "a1-2"}
+			]
+		},
+		{
+			"name": "BBB",
+			"child": [
+				{"name": "b1-1"},
+				{"name": "b1-2"}
+			]
+		},
+		{
+			"name": "CCC",
+			"child": [
+				{"name": "c1-1"},
+				{"name": "c1-2"}
+			]
+		}
+]	
+}
+

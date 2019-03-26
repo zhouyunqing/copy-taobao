@@ -68,7 +68,8 @@ export default {
 
 <style lang="scss" scoped>
 .water-fall {
-    padding-top: 20px;
+    position: relative;
+    top: 10px;
     .single-waterfull {
         float: left;
         padding-left: 20px;
