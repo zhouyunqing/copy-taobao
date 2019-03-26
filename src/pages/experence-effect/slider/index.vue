@@ -111,13 +111,14 @@
 				text-align: center;
 				position: absolute;
 				z-index: 1;
-				color: #9c9c9c;
+				color: #aaa;
 				height: 104px;
 				line-height: 104px;
 				font-size: $font16; /*no*/
 				cursor: pointer;
 				background: -webkit-gradient(linear, left top, right top, color-stop(0, #4d4d4d), color-stop(.4, #4d4d4d), color-stop(.5, white), color-stop(.6, #4d4d4d), color-stop(1, #4d4d4d));
 				-webkit-background-clip: text;
+				-webkit-text-fill-color: transparent;
 				animation: slidetounlock 3s infinite;
 			}
 			.bg {
