@@ -107,11 +107,9 @@
 			}
 			.scale_text {
 				width: 100%;
-				height: 100%;
 				text-align: center;
 				position: absolute;
 				z-index: 1;
-				color: #aaa;
 				height: 104px;
 				line-height: 104px;
 				font-size: $font16; /*no*/

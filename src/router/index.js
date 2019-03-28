@@ -14,6 +14,9 @@ const BuyColor = (resolve) => {
 // 购物车
 const Car = () => import( /* webpackChunkName: "car" */ '@/pages/car/car.vue')
 
+// 我的
+const Mine = () => import(/* webpackChunkName: "Mine" */ '@/pages/mine/mine')
+
 // 登录
 const Logout = () => import( /* webpackChunkName: "Logout" */ '@/pages/mine/login/logout.vue' )
 
@@ -47,6 +50,10 @@ export default new Router({
           component: Car
         }
       ]
+    },
+    {
+      path: '/mine',
+      component: Mine
     },
     {
       path: '/movie',
