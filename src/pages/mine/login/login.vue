@@ -49,8 +49,8 @@ export default {
           this.$refs.verify.moseUpFn()
         } else {
           // 发送请求
-        //   this.$store.dispatch('setStorage', {user: this.registData.tel})
-        //   this.$store.dispatch('setLogin', '1')
+          this.$store.dispatch('setStorage', {user: this.registData.tel})
+          this.$store.dispatch('setLogin', '1')
           this.$router.push({path: '/mine'})
         }
     }
@@ -62,7 +62,7 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-@import '../../../assets/css/public.sass';
+@import '../../../assets/scss/public.scss';
 .login-wrap {
   padding-top: 90px;
   .login-tips {

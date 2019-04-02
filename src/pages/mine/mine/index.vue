@@ -38,7 +38,7 @@ export default {
 </script>
 
 <style scoped lang="scss">
-@import '../../../assets/css/public.sass';
+@import '../../../assets/scss/public.scss';
 .mine-wrap {
   margin-top: -5px;
   background-color: #FF5000;

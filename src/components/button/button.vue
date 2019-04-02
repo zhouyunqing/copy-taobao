@@ -27,7 +27,7 @@
 </script>
 
 <style scoped lang="scss">
-@import '../../assets/css/public.sass';
+@import '../../assets/scss/public.scss';
 .btn-wrap {
     .default-btn {
         display: block;
