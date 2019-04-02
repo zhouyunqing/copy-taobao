@@ -7,7 +7,7 @@
 
 <script>
 import Tab from '@/components/tabs'
-import scale from '@/common/js/scale'
+import scale from '@/assets/js/scale'
 export default {
   name: 'Home',
   mounted () {

@@ -37,8 +37,8 @@ export default {
 }
 </script>
 
-<style lang="scss">
-@import '../../../common/css/public.sass';
+<style scoped lang="scss">
+@import '../../../assets/css/public.sass';
 .mine-wrap {
   margin-top: -5px;
   background-color: #FF5000;
@@ -63,7 +63,7 @@ export default {
         height: 98px;
         border: 1px solid $white;
         border-radius: 50%;
-        background: url('../../../common/img/mine/avator.png') no-repeat;
+        background: url('../../../assets/img/mine/avator.png') no-repeat;
         background-size: contain;
       }
     }
@@ -99,7 +99,7 @@ export default {
       .vip-logo {
         width: 140px;
         height: 28px;
-        background: url('../../../common/img/mine/vip-logo.png') no-repeat;
+        background: url('../../../assets/img/mine/vip-logo.png') no-repeat;
         background-size: contain;
       }
       .naughty-value {

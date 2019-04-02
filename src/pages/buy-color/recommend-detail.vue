@@ -38,8 +38,8 @@ export default {
 }
 </script>
 
-<style lang="scss">
-@import '../../common/css/public.sass';
+<style lang="scss" scoped>
+@import '../../assets/css/public.sass';
 .article-area {
   margin-top: 90px;
   padding: 0 30px;

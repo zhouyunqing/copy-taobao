@@ -55,7 +55,7 @@
     <!-- 中奖头条E -->
 
     <audio controls autoplay="autoplay" ref="audio" style="display:none">
-      <source src="../../common/audio/because.mp3" type="audio/mpeg">
+      <source src="../../assets/audio/because.mp3" type="audio/mpeg">
     </audio>
 
     <!-- 焦点赛事S -->
@@ -66,14 +66,14 @@
           <div class="live-content">
             <div class="first">
               <div class="img-width">
-                <img class="team-icon" src="../../common/img/group1.png" alt="">
+                <img class="team-icon" src="../../assets/img/group1.png" alt="">
               </div>
               <div class="competition-time">
                 <p class="team-date">欧冠 周一001</p>
                 <p class="team-timer">{{item.start}}</p>
               </div>
               <div class="img-width">
-                <img class="team-icon" src="../../common/img/group2.png" alt="">
+                <img class="team-icon" src="../../assets/img/group2.png" alt="">
               </div>
             </div>
             <div class="second">
@@ -129,32 +129,32 @@ export default {
       recommends: [
         {
           linkUrl: 'https://www.baidu.com',
-          picUrl: require('../../common/img/home/1.jpg')
+          picUrl: require('../../assets/img/home/1.jpg')
         },
         {
           linkUrl: 'https://www.baidu.com',
-          picUrl: require('../../common/img/home/2.jpg')
+          picUrl: require('../../assets/img/home/2.jpg')
         },
         {
           linkUrl: 'https://www.baidu.com',
-          picUrl: require('../../common/img/home/3.jpg')
+          picUrl: require('../../assets/img/home/3.jpg')
         },
         {
           linkUrl: 'https://www.baidu.com',
-          picUrl: require('../../common/img/home/4.jpg')
+          picUrl: require('../../assets/img/home/4.jpg')
         }
       ],
       wrapperData: [
-        {text: '天猫', icon: require('../../common/img/home/wrapper/tm.png')},
-        {text: '聚划算', icon: require('../../common/img/home/wrapper/jhs.png')},
-        {text: '天猫国际', icon: require('../../common/img/home/wrapper/tmgj.png')},
-        {text: '外卖', icon: require('../../common/img/home/wrapper/wm.png')},
-        {text: '天猫超市', icon: require('../../common/img/home/wrapper/tmcs.png')},
-        {text: '充值中心', icon: require('../../common/img/home/wrapper/czzx.png')},
-        {text: '飞猪旅行', icon: require('../../common/img/home/wrapper/fzlx.png')},
-        {text: '领金币', icon: require('../../common/img/home/wrapper/ljb.png')},
-        {text: '拍卖', icon: require('../../common/img/home/wrapper/pm.png')},
-        {text: '分类', icon: require('../../common/img/home/wrapper/fl.png')},
+        {text: '天猫', icon: require('../../assets/img/home/wrapper/tm.png')},
+        {text: '聚划算', icon: require('../../assets/img/home/wrapper/jhs.png')},
+        {text: '天猫国际', icon: require('../../assets/img/home/wrapper/tmgj.png')},
+        {text: '外卖', icon: require('../../assets/img/home/wrapper/wm.png')},
+        {text: '天猫超市', icon: require('../../assets/img/home/wrapper/tmcs.png')},
+        {text: '充值中心', icon: require('../../assets/img/home/wrapper/czzx.png')},
+        {text: '飞猪旅行', icon: require('../../assets/img/home/wrapper/fzlx.png')},
+        {text: '领金币', icon: require('../../assets/img/home/wrapper/ljb.png')},
+        {text: '拍卖', icon: require('../../assets/img/home/wrapper/pm.png')},
+        {text: '分类', icon: require('../../assets/img/home/wrapper/fl.png')},
       ],
       activeText: '拉开距离看见了家里        第三方第三方大幅度       发个电饭锅电饭锅非',
       activeData: [
@@ -278,9 +278,9 @@ export default {
 </script>
 
 <style scoped lang="scss">
-@import '../../common/css/public.sass';
+@import '../../assets/css/public.sass';
 .swiper-pagination-fraction, .swiper-pagination-custom, .swiper-container-horizontal > .swiper-pagination-bullets {
-  bottom: 20px !important;;
+  bottom: 35px !important;;
 }
 ul li {
   margin: 0;
@@ -304,7 +304,7 @@ ul li {
       padding-left: 84px;
       padding-top: 12px;
       padding-bottom: 12px;
-      background-image: url('../../common/img/home/logo.png');
+      background-image: url('../../assets/img/home/logo.png');
       background-repeat: no-repeat;
       background-size: 54px 40px;
       background-position: 18px center;
@@ -330,7 +330,7 @@ ul li {
             width: 30px;
             height: 30px;
             color: #fff;
-            background: url('../../common/img/home/search-c.png') no-repeat;
+            background: url('../../assets/img/home/search-c.png') no-repeat;
           }
         }
       }
@@ -353,7 +353,7 @@ ul li {
   .box-wrap {
     display: flex;
     position: relative;
-    margin-top: -20px;
+    margin-top: -22px;
     z-index: 2;
     .DView {
       display: flex;
@@ -369,13 +369,14 @@ ul li {
     .box-header{
       display: flex;
       position: absolute;
+      top: -10px;
       width: 100%;
       height: 100%;
       overflow: hidden;
       .header-back {
         width: 100%;
         height: 100%;
-        background-image: url('../../common/img/home/wrapper/wrapper_header.png');
+        background-image: url('../../assets/img/home/wrapper/wrapper_header.png');
         background-repeat: no-repeat;
         background-position: center center;
         background-size: contain;

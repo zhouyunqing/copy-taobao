@@ -39,7 +39,7 @@ export default {
 </script>
 
 <style lang="scss">
-@import '../../common/css/public.sass';
+@import '../../assets/css/public.sass';
 .header {
   height: 90px;
   background: #ff9000;

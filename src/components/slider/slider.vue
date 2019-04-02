@@ -11,7 +11,7 @@
 </template>
 
 <script>
-  import {addClass} from "../../common/js/dom";
+  import {addClass} from "@/assets/js/dom";
   import BScroll from 'better-scroll'
 
   export default {
@@ -128,7 +128,7 @@
 </script>
 
 <style lang="scss">
-  @import "../../common/css/public.sass";
+  @import "../../assets/css/public.sass";
 
   .slider {
     position: relative;

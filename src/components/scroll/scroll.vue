@@ -215,7 +215,7 @@
 </script>
 
 <style lang="scss">
-  @import "../../common/css/public.sass";
+  @import "../../assets/css/public.sass";
   .pulldown, .pullup {
     width: 100%;
     height: 100px;

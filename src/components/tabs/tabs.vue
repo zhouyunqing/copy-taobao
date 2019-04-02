@@ -22,7 +22,7 @@
 </script>
 
 <style lang="scss">
-  @import "../../common/css/public.sass";
+  @import "../../assets/css/public.sass";
   .tab {
     position: fixed;
     left: 0;
@@ -42,15 +42,15 @@
       }
       &.router-link-active {
         .for-color-active {
-          background: url('../../common/img/tabs/for-color-active.png') no-repeat;
+          background: url('../../assets/img/tabs/for-color-active.png') no-repeat;
           background-size: contain;
         }
         .car-color-active {
-          background: url('../../common/img/tabs/car_active.png') no-repeat;
+          background: url('../../assets/img/tabs/car_active.png') no-repeat;
           background-size: contain;
         }
         .mine-color-active {
-          background: url('../../common/img/tabs/mine-active.png') no-repeat;
+          background: url('../../assets/img/tabs/mine-active.png') no-repeat;
           background-size: contain;
         }
         .tab-link {
@@ -63,15 +63,15 @@
         margin: 6px auto;
       }
       .for-color {
-        background: url('../../common/img/tabs/for-color-gray.png') no-repeat;
+        background: url('../../assets/img/tabs/for-color-gray.png') no-repeat;
         background-size: contain;
       }
       .car-color {
-        background: url('../../common/img/tabs/car.png') no-repeat;
+        background: url('../../assets/img/tabs/car.png') no-repeat;
         background-size: contain;
       }
       .mine-color {
-        background: url('../../common/img/tabs/mine-gray.png') no-repeat;
+        background: url('../../assets/img/tabs/mine-gray.png') no-repeat;
         background-size: contain;
       }
     }

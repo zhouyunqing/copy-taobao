@@ -15,7 +15,7 @@
 
 <script>
 import { mapGetters } from 'vuex'
-import Price from '@/common/js/price.js'
+import Price from '@/assets/js/price.js'
 export default {
   data () {
     return {
@@ -92,7 +92,7 @@ export default {
 </script>
 
 <style lang="scss">
-@import '../../common/css/public.sass';
+@import '../../assets/css/public.sass';
 .three {
   display: flex;
   align-items: center;

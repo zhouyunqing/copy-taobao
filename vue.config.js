@@ -12,7 +12,7 @@ module.exports = {
   outputDir: 'dist',
 
   // 放置静态资源的地方 (js/css/img/font/...)
-  assetsDir: './',
+  assetsDir: './assets',
 
   // 是否在保存的时候使用 `eslint-loader` 进行检查。
   // 有效的值：`ture` | `false` | `"error"`

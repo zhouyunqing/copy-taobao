@@ -4,10 +4,10 @@ import router from './router'
 import store from './store'
 import 'lib-flexible'
 import axios from 'axios'
-import '@/common/css/reset.sass'
+import '@/assets/css/reset.sass'
 import VueLazyLoad from 'vue-lazyload'
 import Toast from '@/components/toast'
-import VueBus from './common/js/vue-bus'
+import VueBus from './assets/js/vue-bus'
 import Filter from '@/filter'
 import VueAwesomeSwiper from 'vue-awesome-swiper'
 import 'swiper/dist/css/swiper.css'
@@ -16,7 +16,7 @@ Vue.prototype.$axios = axios
 Vue.use(Toast)
 Vue.use(VueLazyLoad, {
   preLoad: 1.3,
-  error: require('./common/img/error.jpg')
+  error: require('./assets/img/error.jpg')
 })
 Vue.use(VueBus)
 Vue.use(Filter)

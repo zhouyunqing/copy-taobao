@@ -1,6 +1,5 @@
 <template>
   <div class="login-wrap">
-    <navbar title="登录"></navbar>
     <div class="logo"></div>
 
     <div class="am-list">
@@ -16,7 +15,7 @@
       </div>
 
       <div class="other-link">
-        <span class="f-right">免费注册</span>
+        <span class="f-right" @click="toLogin">免费注册</span>
       </div>
 
       <div class="am-field" @click="toLogout">
@@ -27,7 +26,6 @@
 </template>
 
 <script>
-import Navbar from '@/components/navbar'
 export default {
   data () {
     return {
@@ -35,6 +33,11 @@ export default {
     }
   },
   methods: {
+    // 注册
+    toLogin () {
+      this.$router.push({path: '/login'})
+    },
+
     // 登录
     toLogout () {
       if (!this.logout.username) {  
@@ -45,21 +48,18 @@ export default {
         console.log('跳转')
       }
     }
-  },
-  components: {
-    Navbar
   }
 }
 </script>
 
 <style scoped lang="scss">
-@import '../../../common/css/public.sass';
+@import '../../../assets/css/public.sass';
 .login-wrap {
   .logo {
     width: 160px;
     height: 160px;
-    margin: 160px auto 0;
-    background: url('../../../common/img/mine/logo.png') no-repeat;
+    margin: 94px auto 0;
+    background: url('../../../assets/img/mine/logo.png') no-repeat;
     background-size: contain;
   }
   .am-list {
