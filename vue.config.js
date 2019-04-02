@@ -52,6 +52,9 @@ module.exports = {
         plugins: [require('postcss-px2rem')({
             remUnit: 75
         })]
+      },
+      sass: {
+        data: `@import "@/assets/scss/public.scss";`
       }
     },
 
