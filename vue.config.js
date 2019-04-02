@@ -102,11 +102,5 @@ module.exports = {
   // 三方插件的选项
   pluginOptions: {
     // ...
-    'style-resources-loader': {
-      preProcessor: 'scss',
-      patterns: [
-        path.resolve(__dirname, './src/assets/scss/public.scss')
-      ]
-    } 
   }
 }
