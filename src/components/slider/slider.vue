@@ -11,7 +11,7 @@
 </template>
 
 <script>
-  import {addClass} from "@/assets/js/dom";
+  import {addClass} from "@/assets/js/dom.js";
   import BScroll from 'better-scroll'
 
   export default {
