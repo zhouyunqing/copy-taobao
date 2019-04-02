@@ -1,6 +1,6 @@
 <template>
   <div class="tab">
-    <router-link tag="div" class="tab-item" to="/buy-color">
+    <router-link tag="div" class="tab-item" to="/home">
       <div class="tab-icon for-color for-color-active"></div>
       <div class="tab-link">首页</div>
     </router-link>
@@ -42,7 +42,7 @@
       }
       &.router-link-active {
         .for-color-active {
-          background: url('../../assets/img/tabs/for-color-active.png') no-repeat;
+          background: url('../../assets/img/tabs/home_active.png') no-repeat;
           background-size: contain;
         }
         .car-color-active {
@@ -63,7 +63,7 @@
         margin: 6px auto;
       }
       .for-color {
-        background: url('../../assets/img/tabs/for-color-gray.png') no-repeat;
+        background: url('../../assets/img/tabs/home.png') no-repeat;
         background-size: contain;
       }
       .car-color {
