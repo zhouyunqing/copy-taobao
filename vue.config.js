@@ -1,4 +1,4 @@
-const path = require('path')
+// const fs = require('fs')
 
 module.exports = {
 	// 项目部署的基础路径
@@ -57,6 +57,7 @@ module.exports = {
       },
       sass: {
         data: `@import "@/assets/scss/public.scss";`
+        // data: fs.readFileSync('./src/assets/scss/public.scss', 'utf-8')
       }
     },
 
