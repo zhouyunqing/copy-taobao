@@ -74,7 +74,7 @@
 </script>
 
 <style scoped lang="scss">
-	@import '../../../assets/css/public.scss';
+	@import '../../../assets/scss/public.scss';
 	.slider-wrap {
 		padding: 20px;
 		.nc_scale {

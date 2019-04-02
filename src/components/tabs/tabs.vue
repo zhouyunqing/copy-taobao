@@ -22,7 +22,7 @@
 </script>
 
 <style lang="scss">
-  @import "../../assets/css/public.scss";
+  @import "../../assets/scss/public.scss";
   .tab {
     position: fixed;
     left: 0;

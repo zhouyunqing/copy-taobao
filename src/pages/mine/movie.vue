@@ -105,7 +105,7 @@ export default {
 }
 </script>
 
-<style lang="scss">
+<style scoped lang="scss">
   .wrapper {
     width: 100%;
     position: fixed;

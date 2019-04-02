@@ -45,7 +45,7 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-@import '../../assets/css/public.scss';
+@import '../../assets/scss/public.scss';
 .sendSmsBtn{
   border: none;
   height: 60px;

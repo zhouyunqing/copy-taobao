@@ -128,7 +128,7 @@
 </script>
 
 <style lang="scss">
-  @import "../../assets/css/public.scss";
+  @import "../../assets/scss/public.scss";
 
   .slider {
     position: relative;

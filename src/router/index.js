@@ -1,12 +1,14 @@
 import Vue from 'vue'
 import Router from 'vue-router'
 
+Vue.use(Router)
+
 // 主页
-const Home = () => import( /* webpackChunkName: "home" */ '@/pages/home')
+const HomeView = () => import( /* webpackChunkName: "home" */ '@/pages/home')
 
 // 购彩模块
-const BuyColor = (resolve) => {
-  import ('@/pages/buy-color/buy-color').then((module) => {
+const Home = (resolve) => {
+  import ('@/pages/home/home').then((module) => {
     resolve(module)
   })
 }
@@ -24,37 +26,44 @@ const Logout = () => import( /* webpackChunkName: "Logout" */ '@/pages/mine/logi
 const Login = () => import( /* webpackChunkName: "Login" */ '@/pages/mine/login/login.vue' )
 
 // 电影列表
-const Movie = (resolve) => {
-  import('@/pages/mine/movie').then((module) => {
-    resolve(module)
-  })
-}
+const Movie = () => import(/* webpackChunkName: "movie" */ '@/pages/mine/movie' )
 
 /* 效果体验区 */
 const WaterfallFlow = () => import( /* webpackChunkName: "waterfall-flow" */ '@/pages/experence-effect/waterfall-flow')
 const Tree = () => import( /* webpackChunkName: "tree" */ '@/pages/experence-effect/tree')
 const Slider = () => import( /* webpackChunkName: "slider" */ '@/pages/experence-effect/slider-block')
 
-Vue.use(Router)
 
-export default new Router({
+const router = new Router({
   routes: [
     {
       path: '/',
-      component: Home,
-      redirect: '/buy-color',
+      component: HomeView,
+      redirect: '/home',
+      meta: {
+        auth: false
+      },
       children: [
         {
-          path: '/buy-color',
-          component: BuyColor
+          path: '/home',
+          component: Home,
+          meta: {
+            auth: false
+          }
         },
         {
           path: '/car',
-          component: Car
+          component: Car,
+          meta: {
+            auth: true
+          }
         },
         {
           path: '/mine',
-          component: Mine
+          component: Mine,
+          meta: {
+            auth: true
+          }
         },
       ]
     },
@@ -64,11 +73,17 @@ export default new Router({
     },
     {
       path: '/logout',
-      component: Logout
+      component: Logout,
+      meta: {
+        auth: false
+      }
     },
     {
       path: '/login',
-      component: Login
+      component: Login,
+      meta: {
+        auth: false
+      }
     },
     {
       path: '/waterfall-flow',
@@ -84,3 +99,20 @@ export default new Router({
     }
   ]
 })
+
+router.beforeEach((to, from, next) => {
+  if (to.matched.some(m => m.meta.auth)) {
+    if (window.localStorage.isLogin === '1') {
+      next()
+    } else if (to.path !== '/') {
+      Vue.prototype.$toast('请先注册')
+      setTimeout(()=>{
+        next({path: '/login'})
+      },1000)
+    }
+  } else {
+    next()
+  }
+})
+
+export default router
