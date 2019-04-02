@@ -39,7 +39,7 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-@import '../../assets/css/public.sass';
+@import '../../assets/css/public.scss';
 .article-area {
   margin-top: 90px;
   padding: 0 30px;

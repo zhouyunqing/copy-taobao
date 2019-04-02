@@ -92,7 +92,7 @@ export default {
 </script>
 
 <style lang="scss">
-@import '../../assets/css/public.sass';
+@import '../../assets/css/public.scss';
 .three {
   display: flex;
   align-items: center;

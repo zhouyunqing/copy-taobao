@@ -278,7 +278,7 @@ export default {
 </script>
 
 <style scoped lang="scss">
-@import '../../assets/css/public.sass';
+@import '../../assets/css/public.scss';
 .swiper-pagination-fraction, .swiper-pagination-custom, .swiper-container-horizontal > .swiper-pagination-bullets {
   bottom: 35px !important;;
 }

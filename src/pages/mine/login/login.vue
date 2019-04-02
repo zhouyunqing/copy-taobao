@@ -62,7 +62,7 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-@import '../../../assets/css/public.sass';
+@import '../../../assets/css/public.scss';
 .login-wrap {
   padding-top: 90px;
   .login-tips {

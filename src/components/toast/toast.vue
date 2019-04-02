@@ -16,7 +16,7 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-@import '../../assets/css/public.sass';
+@import '../../assets/css/public.scss';
 .dialog-tips{
   position: fixed;
   top: 50%;
