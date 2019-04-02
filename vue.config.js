@@ -1,3 +1,5 @@
+const path = require('path')
+
 module.exports = {
 	// 项目部署的基础路径
   // 我们默认假设你的应用将会部署在域名的根部，
@@ -97,5 +99,11 @@ module.exports = {
   // 三方插件的选项
   pluginOptions: {
     // ...
+    'style-resources-loader': {
+      preProcessor: 'scss',
+      patterns: [
+        path.resolve(__dirname, './src/assets/scss/public.scss')
+      ]
+    } 
   }
 }
