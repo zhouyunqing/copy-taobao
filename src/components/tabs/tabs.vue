@@ -21,8 +21,7 @@
   }
 </script>
 
-<style lang="scss">
-  @import "../../assets/scss/public.scss";
+<style scoped lang="scss">
   .tab {
     position: fixed;
     left: 0;

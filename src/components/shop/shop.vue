@@ -92,7 +92,6 @@ export default {
 </script>
 
 <style scoped lang="scss">
-@import '../../assets/scss/public.scss';
 .three {
   display: flex;
   align-items: center;

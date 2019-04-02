@@ -105,7 +105,7 @@ router.beforeEach((to, from, next) => {
     if (window.localStorage.isLogin === '1') {
       next()
     } else if (to.path !== '/') {
-      Vue.prototype.$toast('请先注册')
+      Vue.prototype.$toast('请先登录')
       setTimeout(()=>{
         next({path: '/logout'})
       },1000)

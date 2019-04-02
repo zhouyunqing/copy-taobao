@@ -39,7 +39,6 @@ export default {
 </script>
 
 <style scoped lang="scss">
-@import '../../assets/scss/public.scss';
 .header {
   height: 90px;
   background: #ff9000;

@@ -53,7 +53,6 @@ export default {
 </script>
 
 <style scoped lang="scss">
-@import '../../../assets/scss/public.scss';
 .login-wrap {
   .logo {
     width: 160px;

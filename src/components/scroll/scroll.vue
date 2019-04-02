@@ -214,8 +214,7 @@
   }
 </script>
 
-<style lang="scss">
-  @import "../../assets/scss/public.scss";
+<style scoped lang="scss">
   .pulldown, .pullup {
     width: 100%;
     height: 100px;

@@ -128,8 +128,6 @@
 </script>
 
 <style lang="scss">
-  @import "../../assets/scss/public.scss";
-
   .slider {
     position: relative;
     min-height: 2px;

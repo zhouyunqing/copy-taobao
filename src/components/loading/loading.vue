@@ -17,7 +17,6 @@
 </script>
 
 <style lang="scss">
-@import '../../assets/scss/public.scss';
 .loading {
   width: 100%;
   text-align: center;
