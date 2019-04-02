@@ -12,6 +12,10 @@ import Filter from '@/filter'
 import VueAwesomeSwiper from 'vue-awesome-swiper'
 import 'swiper/dist/css/swiper.css'
 
+// 工具函数
+import utils from '@/assets/js/utils.js'
+Vue.prototype.$utils = utils
+
 Vue.prototype.$axios = axios
 Vue.use(Toast)
 Vue.use(VueLazyLoad, {

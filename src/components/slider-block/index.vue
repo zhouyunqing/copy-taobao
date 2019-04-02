@@ -50,22 +50,22 @@
 				} else if (this.moveX > 0) {
 					this.btnSlide.style = `transform: translateX(${this.moveX}px)`
 					this.sliderBg = `width: ${this.moveX}px`
-
+				
 					let maxWidth = ncScale.offsetWidth - this.btnSlide.offsetWidth		// 获取最大的滑动宽度
 					if (this.moveX >= (maxWidth)) {
 						this.btnSlide.style = `transform: translateX(${maxWidth}px)`
 						this.sliderBg = `width: ${maxWidth}px`
 						scaleText.innerHTML = '通过验证'
-                        this.$emit('passVerify')
+						this.$emit('passVerify')
 					}
 				} 
 			},
 
 			moseUpFn () {
-                setTimeout(()=>{
-                    this.sliderBg = `width: 0`
-                    this.btnSlide.style = `transform: translateX(0)`
-                },500)
+				setTimeout(()=>{
+					this.sliderBg = `width: 0`
+					this.btnSlide.style = `transform: translateX(0)`
+				},500)
 			}
 		}
 	}

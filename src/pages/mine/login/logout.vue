@@ -45,7 +45,17 @@ export default {
       } else if (!this.logout.password) {
         this.$toast('请输入密码')
       } else {
-        console.log('跳转')
+        this.checkRegist()
+      }
+    },
+
+    // 判断是否有注册过
+    checkRegist () {
+      let userInfo = this.$utils.getUserInfo()
+      if (Object.prototype.toString.call(userInfo) != '[object Null]' && userInfo.isLogin) {
+        this.$router.push({path: '/mine'})
+      } else {
+        this.$router.push({path: '/login'})
       }
     }
   }
