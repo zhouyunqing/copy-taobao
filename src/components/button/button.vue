@@ -1,6 +1,6 @@
 <template>
 	<div class="btn-wrap">
-        <a class="default-btn" :class="type + '-btn'">
+        <a class="default-btn" :disabled="disabled" :class="[type + '-btn', disType]">
             <span v-text="btnText"></span>
         </a>
     </div>
@@ -16,13 +16,23 @@
             type: {
                 type: String,
                 default: ''
-            }
+            },
+            disType: {
+                type: String,
+                default: ''
+            },
+            disabled: Boolean
         },
 		data () {
 			return {
 				
 			}
-		}
+		},
+        mounted () {
+            if (this.disabled) {
+                this.disType = 'disabled' + '-btn'
+            }
+        }
 	}
 </script>
 
@@ -45,7 +55,7 @@
         white-space: nowrap;
         color: #000;
         background-color: $white;
-        border: 1px solid #ddd;
+        border: 1px solid #ddd; /*no*/
         border-radius: 5px;/*no*/
     }
     .primary-btn {
@@ -55,6 +65,10 @@
             background-color: #0e80d2;
             color: #f6f6f6;
         }
+    }
+    .disabled-btn {
+        color: rgba(0, 0, 0, 0.3);
+        opacity: .6;
     }
 }
 </style>

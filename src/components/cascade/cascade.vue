@@ -92,32 +92,33 @@ export default {
         position: relative;
         left: 0;
         top: 0;
-        font-size: 14px;
         .input-style {
-            height: 28px;
-            line-height: 28px;
-            padding: 0 5px;
+            width: 100%;
+            height: 70px;
+            line-height: 70px;
+            padding: 0 10px;
             border: 1px solid $gray;
-            border-radius: 5px;
+            border-radius: 20px;
+            font-size: $font16; /*no*/
             outline: none;
             &:focus {
-                border: 1px solid #00c0ff;
+                border: 1px solid #00c0ff;  /*no*/
             }
         }
 
         // 下拉选择
         .identical-select {
-            width: 60px;
-            height: 200px;
-            padding: 0 0 20px;
-            border: 1px solid $gray;
+            width: 33%;
+            height: 400px;
+            padding: 0 0 40px;
+            border: 1px solid $gray;    /*no*/
             text-align: center;
             overflow: auto;
-            font-size: 12px;
+            font-size: $font14; /*no*/
             li {
-                height: 20px;
-                line-height: 20px;
-                border-top: 1px solid $gray;
+                height: 70px;
+                line-height: 70px;
+                border-top: 1px solid $gray;    /*no*/
                 cursor: pointer;
                 color: #3c3a3a;
             }
@@ -125,31 +126,31 @@ export default {
         .first-other {
             position: absolute;
             left: 0;
-            top: 30px;
+            top: 70px;
         }
         .second-other {
             position: absolute;
-            left: 60px;
-            top: 30px;
+            left: 33%;
+            top: 70px;
         }
         .three-other {
             position: absolute;
-            left: 120px;
-            top: 30px;
+            left: 33% * 2;
+            top: 70px;
         }
     }
     .identical-select::-webkit-scrollbar {/*滚动条整体样式*/
-        width: 10px;     /*高宽分别对应横竖滚动条的尺寸*/
-        height: 1px;
+        width: 20px;     /*高宽分别对应横竖滚动条的尺寸*/
+        height: 2px;
     }
     .identical-select::-webkit-scrollbar-thumb {/*滚动条里面小方块*/
-        border-radius: 10px;
-        box-shadow: inset 0 0 5px $gray;
+        border-radius: 20px;
+        box-shadow: inset 0 0 10px $gray;
         background: #c7c3c3;
     }
     .identical-select::-webkit-scrollbar-track {/*滚动条里面轨道*/
-        box-shadow: inset 0 0 5px $gray;
-        border-radius: 10px;
+        box-shadow: inset 0 0 10px $gray;
+        border-radius: 20px;
         background: #EDEDED;
     }
 </style>

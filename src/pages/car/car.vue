@@ -1,15 +1,18 @@
 <template>
 	<div class="car-wrap">
-    <Button btnText="pc端体验瀑布流" type="primary" @click.native="toEff('waterfall-flow')"></Button>
+    <Button disabled btnText="pc端体验瀑布流" type="primary" @click.native="toEff('waterfall-flow')"></Button>
     <br>
-    <Button btnText="递归树" type="primary" @click.native="toEff('tree')"></Button>
+    <Button btnText="递归树" disabled @click.native="toEff('tree')"></Button>
     <br>
     <Button btnText="移动端滑块" type="primary" @click.native="toEff('slider')"></Button>
+    <br>
+    <Cascade></Cascade>
   </div>
 </template>
 
 <script>
   import Button from '@/components/button'
+  import Cascade from '@/components/cascade'
 	export default {
 		data () {
 			return {
@@ -22,7 +25,7 @@
       }
     },
     components: {
-      Button
+      Button,Cascade
     }
 	}
 </script>
