@@ -1,6 +1,6 @@
 <template>
 	<div class="btn-wrap">
-        <a class="default-btn" :disabled="disabled" :class="[type + '-btn', disType]">
+        <a class="default-btn" ref="button" :disabled="disabled" :class="[type + '-btn']">
             <span v-text="btnText"></span>
         </a>
     </div>
@@ -17,10 +17,6 @@
                 type: String,
                 default: ''
             },
-            disType: {
-                type: String,
-                default: ''
-            },
             disabled: Boolean
         },
 		data () {
@@ -29,8 +25,14 @@
 			}
 		},
         mounted () {
-            if (this.disabled) {
-                this.disType = 'disabled' + '-btn'
+            this.getDisabled()
+        },
+        methods: {
+            // 获取当前button是否传递disabled
+            getDisabled () {
+                if (this.disabled) {
+                    this.$refs.button.classList.add('disabled-btn')
+                }
             }
         }
 	}
